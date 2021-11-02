@@ -7,7 +7,6 @@ function play(userSel){
     //rock
     let computerChoice = 'rock';
     // window.alert(computerChoice);
-    document.getElementById("o-img").innerHTML = computerChoice;
     // document.getElementById("o-img").src = "svg/rock.svg";
 
   }
@@ -18,7 +17,6 @@ function play(userSel){
     //paper
     let computerChoice = 'paper';
     // window.alert(computerChoice);
-    document.getElementById("o-img").innerHTML = computerChoice;
 
   }
   else
@@ -26,7 +24,6 @@ function play(userSel){
     //scissors
     let computerChoice = 'scissors';
     // window.alert(computerChoice);
-    document.getElementById("o-img").innerHTML = computerChoice;
 
   }
   switch (userSel) {
