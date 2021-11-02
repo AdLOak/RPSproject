@@ -7,9 +7,6 @@ function play(userSel){
     //rock
     let computerChoice = 'rock';
     // window.alert(computerChoice);
-    // document.getElementById("o-img").src = "svg/rock.svg";
-
-  }
 
   }
   else if (num === 1)
@@ -29,47 +26,48 @@ function play(userSel){
   switch (userSel) {
     case 'rock':
       // window.alert("rock selected");
+
       if(computerChoice === 'rock')
       {
-          document.getElementById("result").innerHTML = "It's a Tie";
+        // document.getElementById("result").innerHTML = "It's a Tie";
       }
       else if(computerChoice === 'paper')
       {
-        document.getElementById("result").innerHTML = "You Lost";
+        // document.getElementById("result").innerHTML = "You Lost";
       }
       else
       {
-        document.getElementById("result").innerHTML = "You Won";
+        // document.getElementById("result").innerHTML = "You Won";
       }
     break;
     case 'paper':
       // window.alert("paper selected");
       if(computerChoice === 'rock')
       {
-          document.getElementById("result").innerHTML = "You Won";
+          // document.getElementById("result").innerHTML = "You Won";
       }
       else if(computerChoice === 'paper')
       {
-        document.getElementById("result").innerHTML = "It's a Tie";
+        // document.getElementById("result").innerHTML = "It's a Tie";
       }
       else
       {
-        document.getElementById("result").innerHTML = "You Lost";
+        // document.getElementById("result").innerHTML = "You Lost";
       }
     break;
     case 'scissors':
       // window.alert("scissors selected");
       if(computerChoice === 'rock')
       {
-          document.getElementById("result").innerHTML = "You Lost";
+          // document.getElementById("result").innerHTML = "You Lost";
       }
       else if(computerChoice === 'paper')
       {
-        document.getElementById("result").innerHTML = "You Won";
+        // document.getElementById("result").innerHTML = "You Won";
       }
       else
       {
-        document.getElementById("result").innerHTML = "It's a Tie";
+        // document.getElementById("result").innerHTML = "It's a Tie";
       }
     break;
     default:
