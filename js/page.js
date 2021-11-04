@@ -1,6 +1,10 @@
 function play(userSel){
   var num = Math.floor(Math.random()*3);
 
+  let wins = sessionStorage.getItem("numWins");
+  let ties = sessionStorage.getItem("numTies");
+  let loses = sessionStorage.getItem("numLoses");
+
   document.getElementById("result").innerHTML = num;
   document.getElementById('o-img').src = "";
   if(num === 0)
