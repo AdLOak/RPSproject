@@ -137,8 +137,6 @@ function play(userSel){
     break;
     default:
       window.alert("Error has occurred")
-
-
   }
   // window.alert(num);
   sessionStorage.setItem("numWins", wins);
@@ -147,4 +145,16 @@ function play(userSel){
 
   document.getElementById('pscore').innerHTML = sessionStorage.getItem("numWins");
   document.getElementById("oscore").innerHTML = sessionStorage.getItem("numLoses")
+}
+
+function resetScore()
+{
+    sessionStorage.setItem("numWins", 0);
+    sessionStorage.setItem("numTies", 0);
+    sessionStorage.setItem("numLoses", 0);
+
+    document.getElementById('pscore').innerHTML = sessionStorage.getItem("numWins");
+    document.getElementById('oscore').innerHTML = sessionStorage.getItem("numLoses");
+    document.getElementById('result').innerHTML = "Result";
+    document.getElementById('o-img').src = "svg/mystery.svg"; 
 }
