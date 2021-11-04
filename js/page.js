@@ -41,6 +41,8 @@ function play(userSel){
           document.getElementById('result').innerHTML = "You won!";
         break;
         default:
+          window.alert("Error has occurred")
+
       }
     break;
     case 'paper':
@@ -63,6 +65,7 @@ function play(userSel){
           document.getElementById('result').innerHTML = "You lost!";
         break;
         default:
+          window.alert("Error has occurred")
       }
 
     break;
@@ -86,9 +89,13 @@ function play(userSel){
           document.getElementById('result').innerHTML = "It's a tie!";
         break;
         default:
+          window.alert("Error has occurred")
+
       }
     break;
     default:
+      window.alert("Error has occurred")
+
 
   }
   // window.alert(num);
