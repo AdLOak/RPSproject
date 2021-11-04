@@ -143,7 +143,9 @@ function play(userSel){
   sessionStorage.setItem("numTies", ties);
   sessionStorage.setItem("numLoses", loses);
 
-  document.getElementById('pscore').innerHTML = sessionStorage.getItem("numWins");
+  document.getElementById('won').innerHTML = sessionStorage.getItem("numWins");
+  document.getElementById('tied').innerHTML = sessionStorage.getItem("numTied");
+  document.getElementById("lost").innerHTML = sessionStorage.getItem("numLoses");
 }
 
 function resetScore()
@@ -152,8 +154,9 @@ function resetScore()
     sessionStorage.setItem("numTies", 0);
     sessionStorage.setItem("numLoses", 0);
 
-    document.getElementById('pscore').innerHTML = sessionStorage.getItem("numWins");
-    document.getElementById('oscore').innerHTML = sessionStorage.getItem("numLoses");
+    document.getElementById('won').innerHTML = sessionStorage.getItem("numWins");
+    document.getElementById('tied').innerHTML = sessionStorage.getItem("numTies");
+    document.getElementById('lost').innerHTML = sessionStorage.getItem("numLoses");
     document.getElementById('result').innerHTML = "Result";
-    document.getElementById('o-img').src = "svg/mystery.svg"; 
+    document.getElementById('o-img').src = "svg/mystery.svg";
 }
