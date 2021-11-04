@@ -5,6 +5,35 @@ function play(userSel){
   let ties = sessionStorage.getItem("numTies");
   let loses = sessionStorage.getItem("numLoses");
 
+  if (wins == null)
+  {
+    //"if wins is empty"
+    wins = 0;
+  }
+  else
+  {
+    wins = wins;
+  };
+
+  if(ties == null)
+  {
+    //"if ties is empty"
+    ties = 0;
+  }
+  else {
+    ties = ties;
+  };
+
+  if(loses == null)
+  {
+    //"if loses are empty"
+    loses = 0;
+  }
+  else
+  {
+    loses = loses;
+  }
+
   document.getElementById("result").innerHTML = num;
   document.getElementById('o-img').src = "";
   if(num === 0)
