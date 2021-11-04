@@ -144,7 +144,6 @@ function play(userSel){
   sessionStorage.setItem("numLoses", loses);
 
   document.getElementById('pscore').innerHTML = sessionStorage.getItem("numWins");
-  document.getElementById("oscore").innerHTML = sessionStorage.getItem("numLoses")
 }
 
 function resetScore()
