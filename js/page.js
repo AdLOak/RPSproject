@@ -27,15 +27,18 @@ function play(userSel){
       {
         case 0:
           //rock
-          window.alert("Its a tie ");
+          // window.alert("Its a tie ");
+          document.getElementById('result').innerHTML = "It's a tie!";
         break;
         case 1:
           //paper
-          window.alert("You lost");
+          // window.alert("You lost");
+          document.getElementById('result').innerHTML = "You lost!";
         break;
         case 2:
         //scissors
-          window.alert("You won");
+          // window.alert("You won");
+          document.getElementById('result').innerHTML = "You won!";
         break;
         default:
       }
@@ -46,15 +49,18 @@ function play(userSel){
       {
         case 0:
           //rock
-          window.alert("You won");
+          // window.alert("You won");
+          document.getElementById('result').innerHTML = "You won!";
         break;
         case 1:
           //paper
-          window.alert("It's a tie");
+          // window.alert("It's a tie");
+          document.getElementById('result').innerHTML = "It's a tie!";
         break;
         case 2:
           //scissors
-          window.alert("You Lost");
+          // window.alert("You Lost");
+          document.getElementById('result').innerHTML = "You lost!";
         break;
         default:
       }
@@ -66,15 +72,18 @@ function play(userSel){
       {
         case 0:
           //rock
-          window.alert("You lost ");
+          // window.alert("You lost ");
+          document.getElementById('result').innerHTML = "You lost";
         break;
         case 1:
           //paper
-          window.alert("You won");
+          // window.alert("You won");
+          document.getElementById('result').innerHTML = "You won!";
         break;
         case 2:
           //scissors
-          window.alert("It's a tie");
+          // window.alert("It's a tie");
+          document.getElementById('result').innerHTML = "It's a tie!";
         break;
         default:
       }
