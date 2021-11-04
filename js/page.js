@@ -62,16 +62,19 @@ function play(userSel){
           //rock
           // window.alert("Its a tie ");
           document.getElementById('result').innerHTML = "It's a tie!";
+          ++ties;
         break;
         case 1:
           //paper
           // window.alert("You lost");
           document.getElementById('result').innerHTML = "You lost!";
+          ++loses;
         break;
         case 2:
         //scissors
           // window.alert("You won");
           document.getElementById('result').innerHTML = "You won!";
+          ++wins;
         break;
         default:
           window.alert("Error has occurred")
@@ -86,16 +89,19 @@ function play(userSel){
           //rock
           // window.alert("You won");
           document.getElementById('result').innerHTML = "You won!";
+          ++wins;
         break;
         case 1:
           //paper
           // window.alert("It's a tie");
           document.getElementById('result').innerHTML = "It's a tie!";
+          ++ties;
         break;
         case 2:
           //scissors
           // window.alert("You Lost");
           document.getElementById('result').innerHTML = "You lost!";
+          ++loses;
         break;
         default:
           window.alert("Error has occurred")
@@ -110,16 +116,19 @@ function play(userSel){
           //rock
           // window.alert("You lost ");
           document.getElementById('result').innerHTML = "You lost";
+          ++loses;
         break;
         case 1:
           //paper
           // window.alert("You won");
           document.getElementById('result').innerHTML = "You won!";
+          ++wins;
         break;
         case 2:
           //scissors
           // window.alert("It's a tie");
           document.getElementById('result').innerHTML = "It's a tie!";
+          ++ties;
         break;
         default:
           window.alert("Error has occurred")
