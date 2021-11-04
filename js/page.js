@@ -141,5 +141,10 @@ function play(userSel){
 
   }
   // window.alert(num);
+  sessionStorage.setItem("numWins", wins);
+  sessionStorage.setItem("numTies", ties);
+  sessionStorage.setItem("numLoses", loses);
 
+  document.getElementById('pscore').innerHTML = sessionStorage.getItem("numWins");
+  document.getElementById("oscore").innerHTML = sessionStorage.getItem("numLoses")
 }
