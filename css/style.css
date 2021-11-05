@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 body {
   width: 65%;
   margin: auto;
-  background-color: #EDEDED;
+
+background: rgb(255,253,246);
+background: radial-gradient(circle, rgba(255,253,246,0.7889356426164216) 17%, rgba(255,247,210,0.9345939059217437) 42%, rgba(242,247,208,1) 66%, rgba(107,253,255,1) 100%);
 }
-h1, h2 {
+h1 {
+  text-align: center;
+  font-family: 'Permanent Marker', Sans-serif;
+}
+h2 {
   text-align: center;
 }
 section {
@@ -31,14 +38,14 @@ main section {
 }
 .images img {
   opacity: 50%;
-  transition: all .3s ease-in-out;
+  transition: all .5s ease-in-out;
   cursor: pointer;
 }
 .images img:hover {
   opacity: 100%;
 }
 section.scoreboard {
-  border-style: dashed;
+  border-style: solid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
@@ -68,4 +75,11 @@ section.scoreboard {
 p.label {
   line-height: 1;
   margin-top: 0;
+}
+ .reset
+{
+  position: relative;
+  margin: 0;
+  text-align: center;
+  padding-top: 1rem;
 }
