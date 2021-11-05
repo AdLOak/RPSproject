@@ -68,9 +68,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "It's a tie!";
             ++ties;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           case 1:
             //paper
@@ -78,9 +75,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "You lost!";
             ++loses;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           case 2:
             //scissors
@@ -88,9 +82,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "You won!";
             ++wins;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           default:
             window.alert("Error has occurred");
@@ -106,9 +97,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "You won!";
             ++wins;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           case 1:
             //paper
@@ -116,9 +104,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "It's a tie!";
             ++ties;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           case 2:
             //scissors
@@ -126,9 +111,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "You lost!";
             ++loses;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           default:
             window.alert("Error has occurred");
@@ -145,9 +127,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "You lost";
             ++loses;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           case 1:
             //paper
@@ -155,9 +134,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "You won!";
             ++wins;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           case 2:
             //scissors
@@ -165,9 +141,6 @@ function play(userSel){
             document.getElementById('result').innerHTML = "It's a tie!";
             ++ties;
             resetTurn();
-            setTimeout(()=>{
-              document.getElementById('result').innerHTML = "Result";
-            }, 2000);
           break;
           default:
             window.alert("Error has occurred");
@@ -186,7 +159,7 @@ function play(userSel){
     document.getElementById('numWon').innerHTML = sessionStorage.getItem("numWins");
     document.getElementById('numTied').innerHTML = sessionStorage.getItem("numTies");
     document.getElementById("numLost").innerHTML = sessionStorage.getItem("numLoses");
-  }, 1000);
+  }, 2000);
 
 }
 
