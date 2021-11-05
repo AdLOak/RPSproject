@@ -34,120 +34,139 @@ function play(userSel){
     loses = loses;
   }
 
-  document.getElementById("result").innerHTML = num;
-  document.getElementById('o-img').src = "";
-  if(num === 0)
-  {
-    //rock
-    document.getElementById('o-img').src = "svg/rock.svg";
-  }
-  else if (num === 1)
-  {
-    //paper
-    document.getElementById('o-img').src = "svg/paper.svg";
-  }
-  else
-  {
-    //scissors
-    document.getElementById('o-img').src = "svg/scissors.svg";
-  }
+  document.getElementById("turn").innerHTML = "Opponent's Turn"
+  document.getElementById("result").innerHTML = '...'; //prints out statement as result is being generated
+  document.getElementById('o-img').src = "svg/mystery.svg"; //resets svg source to mystery.svg
 
-  // Start of result declarations
-  switch (userSel) {
-    case 'rock':
-      // window.alert("rock selected"); //prints out user selection
-      switch(num)
-      {
-        case 0:
-          //rock
-          // window.alert("Its a tie ");
-          document.getElementById('result').innerHTML = "It's a tie!";
-          ++ties;
-        break;
-        case 1:
-          //paper
-          // window.alert("You lost");
-          document.getElementById('result').innerHTML = "You lost!";
-          ++loses;
-        break;
-        case 2:
-        //scissors
-          // window.alert("You won");
-          document.getElementById('result').innerHTML = "You won!";
-          ++wins;
-        break;
-        default:
-          window.alert("Error has occurred")
+  setTimeout(() => {
+    //Edits the images for the opponents choice
+    if(num === 0)
+    {
+      //rock
+      document.getElementById('o-img').src = "svg/rock.svg";
+    }
+    else if (num === 1)
+    {
+      //paper
+      document.getElementById('o-img').src = "svg/paper.svg";
+    }
+    else
+    {
+      //scissors
+      document.getElementById('o-img').src = "svg/scissors.svg";
+    }
 
-      }
-    break;
-    case 'paper':
-      // window.alert("paper selected");
-      switch(num)
-      {
-        case 0:
-          //rock
-          // window.alert("You won");
-          document.getElementById('result').innerHTML = "You won!";
-          ++wins;
-        break;
-        case 1:
-          //paper
-          // window.alert("It's a tie");
-          document.getElementById('result').innerHTML = "It's a tie!";
-          ++ties;
-        break;
-        case 2:
-          //scissors
-          // window.alert("You Lost");
-          document.getElementById('result').innerHTML = "You lost!";
-          ++loses;
-        break;
-        default:
-          window.alert("Error has occurred")
-      }
+    // Start of result declarations
+    switch (userSel) {
+      case 'rock':
+        // window.alert("rock selected"); //prints out user selection
+        switch(num)
+        {
+          case 0:
+            //rock
+            // window.alert("Its a tie ");
+            document.getElementById('result').innerHTML = "It's a tie!";
+            ++ties;
+            resetTurn();
+          break;
+          case 1:
+            //paper
+            // window.alert("You lost");
+            document.getElementById('result').innerHTML = "You lost!";
+            ++loses;
+            resetTurn();
+          break;
+          case 2:
+            //scissors
+            // window.alert("You won");
+            document.getElementById('result').innerHTML = "You won!";
+            ++wins;
+            resetTurn();
+          break;
+          default:
+            window.alert("Error has occurred");
+        }
+      break;
+      case 'paper':
+        // window.alert("paper selected");
+        switch(num)
+        {
+          case 0:
+            //rock
+            // window.alert("You won");
+            document.getElementById('result').innerHTML = "You won!";
+            ++wins;
+            resetTurn();
+          break;
+          case 1:
+            //paper
+            // window.alert("It's a tie");
+            document.getElementById('result').innerHTML = "It's a tie!";
+            ++ties;
+            resetTurn();
+          break;
+          case 2:
+            //scissors
+            // window.alert("You Lost");
+            document.getElementById('result').innerHTML = "You lost!";
+            ++loses;
+            resetTurn();
+          break;
+          default:
+            window.alert("Error has occurred");
+        }
 
-    break;
-    case 'scissors':
-      // window.alert("scissors selected");
-      switch(num)
-      {
-        case 0:
-          //rock
-          // window.alert("You lost ");
-          document.getElementById('result').innerHTML = "You lost";
-          ++loses;
-        break;
-        case 1:
-          //paper
-          // window.alert("You won");
-          document.getElementById('result').innerHTML = "You won!";
-          ++wins;
-        break;
-        case 2:
-          //scissors
-          // window.alert("It's a tie");
-          document.getElementById('result').innerHTML = "It's a tie!";
-          ++ties;
-        break;
-        default:
-          window.alert("Error has occurred")
+      break;
+      case 'scissors':
+        // window.alert("scissors selected");
+        switch(num)
+        {
+          case 0:
+            //rock
+            // window.alert("You lost ");
+            document.getElementById('result').innerHTML = "You lost";
+            ++loses;
+            resetTurn();
+          break;
+          case 1:
+            //paper
+            // window.alert("You won");
+            document.getElementById('result').innerHTML = "You won!";
+            ++wins;
+            resetTurn();
+          break;
+          case 2:
+            //scissors
+            // window.alert("It's a tie");
+            document.getElementById('result').innerHTML = "It's a tie!";
+            ++ties;
+            resetTurn();
+          break;
+          default:
+            window.alert("Error has occurred");
 
-      }
-    break;
-    default:
-      window.alert("Error has occurred")
-  }
-  // window.alert(num);
-  sessionStorage.setItem("numWins", wins);
-  sessionStorage.setItem("numTies", ties);
-  sessionStorage.setItem("numLoses", loses);
+        }
+      break;
+      default:
+        window.alert("Error has occurred");
+    }
 
-  document.getElementById('numWon').innerHTML = sessionStorage.getItem("numWins");
-  document.getElementById('numTied').innerHTML = sessionStorage.getItem("numTies");
-  document.getElementById("numLost").innerHTML = sessionStorage.getItem("numLoses");
+    // window.alert(num);
+    sessionStorage.setItem("numWins", wins);
+    sessionStorage.setItem("numTies", ties);
+    sessionStorage.setItem("numLoses", loses);
+
+    document.getElementById('numWon').innerHTML = sessionStorage.getItem("numWins");
+    document.getElementById('numTied').innerHTML = sessionStorage.getItem("numTies");
+    document.getElementById("numLost").innerHTML = sessionStorage.getItem("numLoses");
+  }, 1000);
+
 }
 
+function resetTurn()
+{
+      document.getElementById('turn').innerHTML = "Your Turn";
+}
 function resetScore()
 {
     sessionStorage.setItem("numWins", 0);
@@ -159,4 +178,5 @@ function resetScore()
     document.getElementById('numLost').innerHTML = sessionStorage.getItem("numLoses");
     document.getElementById('result').innerHTML = "Result";
     document.getElementById('o-img').src = "svg/mystery.svg";
+    document.getElementById('turn').innerHTML = "Your Turn";
 }
