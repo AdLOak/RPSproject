@@ -34,7 +34,7 @@ function play(userSel){
     loses = loses;
   }
 
-  document.getElementById("turn").innerHTML = "Opponent's Turn"
+  document.getElementById("turn").innerHTML = "Opponent's Turn!"
   document.getElementById("result").innerHTML = '...'; //prints out statement as result is being generated
   document.getElementById('o-img').src = "svg/mystery.svg"; //resets svg source to mystery.svg
 
@@ -72,14 +72,14 @@ function play(userSel){
           case 1:
             //paper
             // window.alert("You lost");
-            document.getElementById('result').innerHTML = "You lost!";
+            document.getElementById('result').innerHTML = "Paper beats Rock. You lost!";
             ++loses;
             resetTurn();
           break;
           case 2:
             //scissors
             // window.alert("You won");
-            document.getElementById('result').innerHTML = "You won!";
+            document.getElementById('result').innerHTML = "Rock beats Scissors. You won!";
             ++wins;
             resetTurn();
           break;
@@ -94,7 +94,7 @@ function play(userSel){
           case 0:
             //rock
             // window.alert("You won");
-            document.getElementById('result').innerHTML = "You won!";
+            document.getElementById('result').innerHTML = "Paper beats Rock. You won!";
             ++wins;
             resetTurn();
           break;
@@ -108,7 +108,7 @@ function play(userSel){
           case 2:
             //scissors
             // window.alert("You Lost");
-            document.getElementById('result').innerHTML = "You lost!";
+            document.getElementById('result').innerHTML = "Scissors beat Paper. You lost!";
             ++loses;
             resetTurn();
           break;
@@ -124,14 +124,14 @@ function play(userSel){
           case 0:
             //rock
             // window.alert("You lost ");
-            document.getElementById('result').innerHTML = "You lost";
+            document.getElementById('result').innerHTML = "Rock beats Scissors. You lost!";
             ++loses;
             resetTurn();
           break;
           case 1:
             //paper
             // window.alert("You won");
-            document.getElementById('result').innerHTML = "You won!";
+            document.getElementById('result').innerHTML = "Scissors beat Paper. You won!";
             ++wins;
             resetTurn();
           break;
@@ -165,7 +165,7 @@ function play(userSel){
 
 function resetTurn()
 {
-      document.getElementById('turn').innerHTML = "Your Turn";
+      document.getElementById('turn').innerHTML = "Your Turn!";
 }
 function resetScore()
 {
@@ -178,5 +178,5 @@ function resetScore()
     document.getElementById('numLost').innerHTML = sessionStorage.getItem("numLoses");
     document.getElementById('result').innerHTML = "Result";
     document.getElementById('o-img').src = "svg/mystery.svg";
-    document.getElementById('turn').innerHTML = "Your Turn";
+    document.getElementById('turn').innerHTML = "Your Turn!";
 }
